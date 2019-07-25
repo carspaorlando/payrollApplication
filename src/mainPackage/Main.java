@@ -7,13 +7,12 @@ import static java.lang.Math.random;
 
 public class Main {
     static int SIZE = 20;
-    static Employee employeeList[] = new Employee[SIZE];
-    static int currentIndex = 4;
-    public static void main(String[] args){
 
+    public static void main(String[] args){
+        int currentIndex = 4;
         Scanner sc = new Scanner(System.in);
         int optionSelected;
-
+        Employee employeeList[] = new Employee[SIZE];
         employeeList[0] = new Employee("Stephen Evern", 4,"05/22/2019", 12.5, 0.2f);
         employeeList[1] = new Employee("Diana Alfonso", 2, "04/02/2016", 0.06f                );
         employeeList[2] = new Employee("Jose Mercado",3, "18/12/2018", 12.5, 0.2f);
@@ -23,9 +22,11 @@ public class Main {
             optionSelected = displayMainMenu();
             switch (optionSelected){
                 case 1:
-                    addNewEmployee();
+                    employeeList[currentIndex] = addNewEmployee(currentIndex);
+                    currentIndex++;
                     break;
                 case 2:
+                    displayEmployees(employeeList, currentIndex);
                     break;
                 case 3:
                     break;
@@ -66,9 +67,9 @@ public class Main {
         return selection;
 
     }
-    public static void addNewEmployee(){
+    public static Employee addNewEmployee(int currentIndex){
         Scanner sc = new Scanner(System.in);
-
+        Employee addingEmployee;
         String firstName, lastName, startDate;
         int employeeID;
         float employeeCommission;
@@ -87,9 +88,18 @@ public class Main {
         System.out.println("Employee Commission Percentage:");
         employeeCommission = sc.nextFloat();
         String fullName = firstName + " " +lastName;
-        employeeList[currentIndex] = new Employee(fullName, employeeID, startDate, employeeHourlyRate,employeeCommission);
+        addingEmployee = new Employee(fullName, employeeID, startDate, employeeHourlyRate,employeeCommission);
         System.out.println("Employee was successfully created!");
+        return addingEmployee;
 
+    }
+
+    public static void displayEmployees(Employee employeeList[], int numberOfEmployees){
+        //Scanner sc = new Scanner(System.in);
+        for(int x = 0; x < numberOfEmployees; x++){
+            System.out.println("Employee Id: "+ employeeList[x].employeeID +
+                    " | Employee Name: " + employeeList[x].employeeName);
+        }
 
     }
 
