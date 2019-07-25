@@ -56,10 +56,11 @@ public class Main {
 
         System.out.println("Employee.Main Menu\n\n");
         System.out.println("1. Add new Employee");
-        System.out.println("2. Calculate Pay");
+        System.out.println("2. Display all employees");
         System.out.println("3. Delete employee");
         System.out.println("4. Edit Employee");
         System.out.println("5. Delete an Employee");
+        System.out.println("6. Calculate Pay");
         System.out.println("0. to exit the program");
         selection = sc.nextInt();
         return selection;
