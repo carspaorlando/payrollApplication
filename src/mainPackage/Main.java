@@ -98,7 +98,10 @@ public class Main {
         //Scanner sc = new Scanner(System.in);
         for(int x = 0; x < numberOfEmployees; x++){
             System.out.println("Employee Id: "+ employeeList[x].employeeID +
-                    " | Employee Name: " + employeeList[x].employeeName);
+                    " | Employee Name: " + employeeList[x].employeeName +
+                    " | Employee Start Date: " + employeeList[x].employeeStartDate +
+                    " | Employee Hourly Rate: " + employeeList[x].employeeHourlyRate +
+                    " | Employee Commission Percentage: " + employeeList[x].employeeCommissionPercentage);
         }
 
     }

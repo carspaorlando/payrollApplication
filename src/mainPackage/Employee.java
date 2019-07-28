@@ -70,10 +70,11 @@ public class Employee {
         }
 
         public void setEmployeeStartDate(String newEmployeeStartDate){
-            String pattern = "MM/dd/yyyy";
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-            this.employeeStartDate = simpleDateFormat.format(new Date() {
-            });
+           this.employeeStartDate = newEmployeeStartDate;
+            // String pattern = "MM/dd/yyyy";
+           // SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+           // this.employeeStartDate = simpleDateFormat.format(new Date() {
+           // });
         }
 
         public void setEmployeeHourlyRate(double newEmployeeHourlyRate) {
