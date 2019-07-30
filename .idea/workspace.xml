@@ -28,10 +28,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-
             <state relative-caret-position="688">
               <caret line="92" selection-start-line="92" selection-end-line="92" />
-
+            </state>
             <state relative-caret-position="1700">
               <caret line="103" column="104" selection-start-line="103" selection-start-column="104" selection-end-line="103" selection-end-column="104" />
 
@@ -104,7 +103,7 @@
       </pane>
 
       <pane id="Scope" />
-=======
+
 
     </panes>
   </component>
@@ -195,10 +194,10 @@
 
         <state relative-caret-position="688">
           <caret line="92" selection-start-line="92" selection-end-line="92" />
-=======
+        </state>
         <state relative-caret-position="1700">
           <caret line="103" column="104" selection-start-line="103" selection-start-column="104" selection-end-line="103" selection-end-column="104" />
->>>>>>> displayEmployees
+
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
