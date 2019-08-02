@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class Employee {
 
         //Properties
-        String employeeName;
-        int employeeID;
-        String employeeStartDate;
-        double employeeHourlyRate;
-        float employeeCommissionPercentage;
+        private String employeeName;
+        private int employeeID;
+        private String employeeStartDate;
+        private double employeeHourlyRate;
+        private float employeeCommissionPercentage;
 
 
         //Constructors
@@ -57,6 +57,9 @@ public class Employee {
             setEmployeeID(inputEmployeeID);
             setEmployeeStartDate(inputEmployeeStartDate);
             setEmployeeCommissionPercentage(inputEmployeeCommissionPercentage);
+
+        }
+        public Employee(){
 
         }
         //Setters

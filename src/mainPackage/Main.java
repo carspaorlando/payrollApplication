@@ -29,12 +29,23 @@ public class Main {
                     displayEmployees(employeeList, currentIndex);
                     break;
                 case 3:
+                    int employeeBeingDeleted = deleteEmployees(employeeList, currentIndex);
+                    if (employeeBeingDeleted > currentIndex){
+                        System.out.println("No Action Was Performed");
+                        displayEmployees(employeeList, currentIndex);
+                    }
+                    else{
+                        employeeList[employeeBeingDeleted] = new Employee();
+                        displayEmployees(employeeList, currentIndex);
+                    }
                     break;
                 case 4:
                     break;
                 case 5:
                     break;
                 case 6:
+                    break;
+                case 7:
                     break;
                 default:
                     break;
@@ -60,8 +71,9 @@ public class Main {
         System.out.println("2. Display all employees");
         System.out.println("3. Delete employee");
         System.out.println("4. Edit Employee");
-        System.out.println("5. Delete an Employee");
-        System.out.println("6. Calculate Pay");
+        System.out.println("5. Search for an employee");
+        System.out.println("6. Calculate Expenses");
+        System.out.println("7. Calculate Pay");
         System.out.println("0. to exit the program");
         selection = sc.nextInt();
         return selection;
@@ -97,13 +109,29 @@ public class Main {
     public static void displayEmployees(Employee employeeList[], int numberOfEmployees){
         //Scanner sc = new Scanner(System.in);
         for(int x = 0; x < numberOfEmployees; x++){
-            System.out.println("Employee Id: "+ employeeList[x].employeeID +
-                    " | Employee Name: " + employeeList[x].employeeName +
-                    " | Employee Start Date: " + employeeList[x].employeeStartDate +
-                    " | Employee Hourly Rate: " + employeeList[x].employeeHourlyRate +
-                    " | Employee Commission Percentage: " + employeeList[x].employeeCommissionPercentage);
+            System.out.println("Employee Id: "+ employeeList[x].getEmployeeID() +
+                    " | Employee Name: " + employeeList[x].getEmployeeName() +
+                    " | Employee Start Date: " + employeeList[x].getEmployeeStartDate() +
+                    " | Employee Hourly Rate: " + employeeList[x].getEmployeeHourlyRate() +
+                    " | Employee Commission Percentage: " + employeeList[x].getEmployeeCommissionPercentage());
         }
 
+    }
+
+    public static int deleteEmployees(Employee employeeList[], int currentIndex){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the employee ID you would like to delete");
+        int indexToBeDeleted = sc.nextInt();
+        boolean verification = false;
+        System.out.println("Are you sure you want to delete " + employeeList[indexToBeDeleted].getEmployeeName() + "?");
+        System.out.println("write true to delete, false to cancel");
+        verification = sc.nextBoolean();
+        if (verification){
+            return indexToBeDeleted;
+        }
+        else{
+            return ++currentIndex;
+        }
     }
 
 }

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="193d020f-809c-4665-a46b-386c9b6b5925" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/mainPackage/Expenses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainPackage/Income.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercise2/mainPackage/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercise2/mainPackage/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Exercise2/mainPackage/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Exercise2/mainPackage/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="76" column="13" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="17" />
+            <state relative-caret-position="-782">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -28,15 +34,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
-            </state>
-            <state relative-caret-position="1700">
-              <caret line="103" column="104" selection-start-line="103" selection-start-column="104" selection-end-line="103" selection-end-column="104" />
-
+            <state relative-caret-position="-80">
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/Income.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="57" column="75" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
+              <folding>
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#1702#1703#0" expanded="true" />
+                <element signature="e#1761#1762#0" expanded="true" />
+                <element signature="e#1990#1991#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/Expenses.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3893">
+              <caret line="229" column="16" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -58,13 +95,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Employee.java" />
-        <option value="$PROJECT_DIR$/src/mainPackage/Main.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/Employee.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Main.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Income.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Expenses.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -74,17 +113,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-
-
       <pane id="Scope" />
-
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Exercise2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Exercise2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercise2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Exercise2" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Exercise2" type="b2602c69:ProjectViewProjectNode" />
@@ -101,10 +141,7 @@
           <select />
         </subPane>
       </pane>
-
-      <pane id="Scope" />
-
-
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -148,11 +185,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
-
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
-
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11567164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -182,25 +215,49 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3893">
+          <caret line="229" column="16" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mainPackage/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="76" column="13" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="17" />
+        <state relative-caret-position="-782">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-
-        <state relative-caret-position="688">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-        </state>
-        <state relative-caret-position="1700">
-          <caret line="103" column="104" selection-start-line="103" selection-start-column="104" selection-end-line="103" selection-end-column="104" />
-
+        <state relative-caret-position="-80">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Income.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="57" column="75" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
+          <folding>
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#1702#1703#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1990#1991#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Expenses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
