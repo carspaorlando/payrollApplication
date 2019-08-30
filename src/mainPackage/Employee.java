@@ -106,6 +106,11 @@ public class Employee {
         }
 
         //Functions
+        public void printAnEmployee(int index){
+            System.out.println("");
+        }
+
+
         public float getTotalCommission(float inputWeekGross, int numberOfDaysInput){
             int dayMinimumThreshold = 360;
             float weekCommission = inputWeekGross - dayMinimumThreshold * numberOfDaysInput;
@@ -118,6 +123,7 @@ public class Employee {
             weekCommission = weekCommission* employeeCommissionPercentage;
             return weekCommission;
         }
+
 
 
 

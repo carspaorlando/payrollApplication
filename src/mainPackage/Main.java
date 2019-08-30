@@ -13,10 +13,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int optionSelected;
         Employee employeeList[] = new Employee[SIZE];
-        employeeList[0] = new Employee("Stephen Evern", 4,"05/22/2019", 12.5, 0.2f);
+        employeeList[3] = new Employee("Stephen Evern", 4,"05/22/2019", 12.5, 0.2f);
         employeeList[1] = new Employee("Diana Alfonso", 2, "04/02/2016", 0.06f                );
         employeeList[2] = new Employee("Jose Mercado",3, "18/12/2018", 12.5, 0.2f);
-        employeeList[3] = new Employee("Jose Ghersy", 1, "05.15.2015", 12.5, 0.2f);
+        employeeList[0] = new Employee("Jose Ghersy", 1, "05.15.2015", 12.5, 0.2f);
+        //Expenses test = new Expenses();
+        Expenses weekExpenses;
+        Income weekIncome;
 
         do {
             optionSelected = displayMainMenu();
@@ -35,17 +38,24 @@ public class Main {
                         displayEmployees(employeeList, currentIndex);
                     }
                     else{
-                        employeeList[employeeBeingDeleted] = new Employee();
+                        employeeList[employeeBeingDeleted - 1] = new Employee();
                         displayEmployees(employeeList, currentIndex);
+
                     }
                     break;
                 case 4:
+                        Employee employeeList2[] = new Employee[SIZE];
+                        employeeList2 = editEmployeeById(employeeList);
+                        employeeList = employeeList2;
+                        System.gc();
                     break;
                 case 5:
+                        searchEmployee(employeeList, currentIndex);
                     break;
                 case 6:
-                    break;
-                case 7:
+                        weekExpenses = new Expenses();
+                        weekIncome = new Income(weekExpenses.getTotalExpenses());
+                        calculatePayForEachEmployeee(employeeList);
                     break;
                 default:
                     break;
@@ -72,8 +82,7 @@ public class Main {
         System.out.println("3. Delete employee");
         System.out.println("4. Edit Employee");
         System.out.println("5. Search for an employee");
-        System.out.println("6. Calculate Expenses");
-        System.out.println("7. Calculate Pay");
+        System.out.println("6. Calculate Expenses and Pay");
         System.out.println("0. to exit the program");
         selection = sc.nextInt();
         return selection;
@@ -122,16 +131,117 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the employee ID you would like to delete");
         int indexToBeDeleted = sc.nextInt();
-        boolean verification = false;
-        System.out.println("Are you sure you want to delete " + employeeList[indexToBeDeleted].getEmployeeName() + "?");
-        System.out.println("write true to delete, false to cancel");
-        verification = sc.nextBoolean();
-        if (verification){
-            return indexToBeDeleted;
+        if(indexToBeDeleted <= currentIndex) {
+            boolean verification = false;
+            System.out.println("Are you sure you want to delete " + employeeList[(indexToBeDeleted - 1)].getEmployeeName() + "?");
+            System.out.println("write true to delete, false to cancel");
+            verification = sc.nextBoolean();
+            if (verification) {
+                return indexToBeDeleted;
+            } else {
+                return ++currentIndex;
+            }
         }
-        else{
+        else
             return ++currentIndex;
+    }
+
+    public static Employee [] editEmployeeById(Employee employeeListCopy[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the ID of the employee you wish to edit");
+        int id = sc.nextInt();
+        employeeListCopy[id] = editEmployee(employeeListCopy[id]);
+
+        return employeeListCopy;
+    }
+
+    public static Employee editEmployee(Employee employeeObject){
+        String inputEmployeeName, inputEmployeeStartDate;
+
+        double inputEmployeeHourlyRate;
+        float inputEmployeeCommissionPercentage;
+        int selection;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Choose what would you like to edit\n\n");
+        System.out.println("1. Edit name");
+        System.out.println("2. Edit ID");
+        System.out.println("3. Edit start date");
+        System.out.println("4. Edit hourly rate");
+        System.out.println("5. Edit commission percentage");
+        selection = sc.nextInt();
+        switch (selection){
+            case 1:
+                System.out.println("Enter the new first and last name for the employee");
+                inputEmployeeName = sc.next();
+                inputEmployeeName += " " + sc.next();
+                employeeObject.setEmployeeName(inputEmployeeName);
+                break;
+            case 2:
+                System.out.println("Id cannot be changed");
+                break;
+            case 3:
+                System.out.println("Enter the new start date");
+                inputEmployeeStartDate = sc.next();
+                employeeObject.setEmployeeStartDate(inputEmployeeStartDate);
+                break;
+            case 4:
+                System.out.println("Enter the new hourly rate");
+                inputEmployeeHourlyRate = sc.nextDouble();
+                employeeObject.setEmployeeHourlyRate(inputEmployeeHourlyRate);
+                break;
+            case 5:
+                System.out.println("Enter the new commission percentage");
+                inputEmployeeCommissionPercentage = sc.nextFloat();
+                employeeObject.setEmployeeCommissionPercentage(inputEmployeeCommissionPercentage);
+                break;
+            default:
+                System.out.println("Invalid Input");
+
         }
+        System.out.println("You have successfully edited the employee!");
+
+        return employeeObject;
+    }
+
+    public static void searchEmployee(Employee listOfEmployees[], int currentIndex){
+        int i = 0, counter = 0;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the first name of the employee you are searching for:");
+        String nameToSearch = sc.next();
+
+        for(Employee employeeToSearch: listOfEmployees){
+            if(currentIndex == i)//if I let employeeToSearch be a null Value it will cause the code to throw a null pointer exception. Hence the reason for this check.
+                break;
+            else {
+                if(employeeToSearch.getEmployeeName().toLowerCase().contains(nameToSearch.toLowerCase())) {
+                    System.out.println(employeeToSearch.getEmployeeName());
+                    counter++;
+                }
+            }
+            i++;
+        }
+        i = 0;
+
+        Employee [] temporaryListwithPossibleMatches = new Employee[counter];
+        //The second for loop will actually assign the values to the new array so that I can use my already made displayEmployee function.
+        System.out.println("There were " + counter + " employees that match that name");
+        for(Employee employeeToSearch: listOfEmployees){
+            if(i == counter)//Now is my counter that tells me when my array is out of bound
+                break;
+            else {
+                if(employeeToSearch.getEmployeeName().toLowerCase().contains(nameToSearch.toLowerCase())) {
+                    temporaryListwithPossibleMatches[i] = employeeToSearch;
+                    i++;
+                }
+            }
+
+        }
+       displayEmployees(temporaryListwithPossibleMatches, counter);
+    }
+
+    public static void calculatePayForEachEmployeee(Employee listOfEmployees[]){
+        System.out.println("Calculating Pay------------------->");
     }
 
 }
